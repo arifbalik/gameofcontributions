@@ -1,0 +1,25 @@
+{
+    "manifest_version": 2,
+    "name": "Game Of Contributions",
+    "description": "Game Of Life but its your contributions",
+    "version": "1.0",
+    "content_scripts": [
+        {
+            "matches": [
+                "https://github.com/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "browser_action": {
+        "default_icon": "icon.PNG",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "activeTab",
+        "storage",
+        "https://ajax.googleapis.com/"
+    ]
+}
